@@ -1,0 +1,533 @@
+
+
+
+@media (min-width: 992px) { 
+    body {
+        .inner {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+        width: auto;
+    }
+    header {
+        background: transparent;
+        @include box-shadow(none);
+        .menu-button {
+            display: none;
+        }
+    }
+    .reservation-form-container {
+        margin: -255px 0 0 0;
+        .reservation-form {
+            .head {
+                .left {
+                    width: 60%;
+                }
+                .right {
+                    width: 40%;
+                    ul {
+                        text-align: right;
+                    }
+                }
+            }
+            .form {
+                .table-row {
+                    display: table-row;
+                    .table-cell {
+                        position: relative;
+                        display: table-cell;
+                        margin: 0;
+                        padding: 0;
+                        width: auto;
+                        border-right: none;
+                    }
+                }
+                .inputs {
+                    display: table-row-group;
+                    .table-row {
+                        .table-cell {
+                            border-right: 0;
+                            &:last-of-type {
+                                width: 15%;
+                                &::after {
+                                    width: 50%;
+                                    border-bottom: 1px solid #e7e7e7;
+                                }
+                                &::before {
+                                    width: 50%;
+                                    border-bottom: 1px solid #e7e7e7;
+                                }
+                            }
+                            input, .bootstrap-select .btn {
+                                height: 60px;
+                                &.calendar {
+                                    background: url(../images/ico-calendario-input.svg) no-repeat 90% center;
+                                }
+                                &.guests {
+                                    background: url(../images/ico-huespedes-input.svg) no-repeat 100% center;
+                                }
+                            }
+                            button[type="submit"] {
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            &.fly-and-hotel {
+                .full {
+                    display: table-cell !important;
+                }
+                .full-label {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .banners {
+        .banner {
+            margin: 0;
+            h3 {
+                font: 28px/28px Montserrat,sans-serif;
+            }
+        }
+    }
+    .promotional-block {
+        padding: 77px 77px 60px;
+        .title {
+            h1 {
+                margin: -37px 0 15px;
+                padding: 0;
+                font: 47px/50px Montserrat,sans-serif;
+                div {
+                    margin: 0 0 -28px;
+                }
+            }
+        }
+        .text {
+            padding: 0 150px;
+            p {
+                font: 16px/22px Montserrat,sans-serif;
+            }
+        }
+    }
+    .promotional-form {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 30px;
+        background: #14b5d0;
+        .text {
+            position: relative;
+            display: table;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            div {
+                position: relative;
+                display: table-cell;
+                margin: 0;
+                padding: 0 0 0 110px;
+                vertical-align: middle;
+                background: url(../images/ico-formulario-codigo-promocional.png) no-repeat left center;
+                p {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    font: 18px/22px Montserrat,sans-serif;
+                    font-weight: normal;
+                    font-weight: 400;
+                    color: #fff;
+                    text-transform: uppercase;
+                    strong {
+                        margin: 0;
+                        display: block;
+                        font: 30px/40px Montserrat,sans-serif;
+                        font-weight: normal;
+                        font-weight: 700;
+                        text-transform: none;
+                    }
+                    span {
+                        display: block;
+                        text-transform: uppercase;
+                        color: #006974;
+                    }
+                }
+            }
+        }
+        .form-container {
+            position: relative;
+            display: table;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            width: 100%;
+            div.cell {
+                position: relative;
+                display: table-cell;
+                margin: 0;
+                padding: 0;
+                vertical-align: middle;
+                width: 100%;
+            }
+            form {
+                position: relative;
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                input {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0 25px;
+                    height: 76px;
+                    background: url(../images/bg-input-codigo-promocional.png) no-repeat right top #72d3e3;
+                    border: 0;
+                    border-bottom-color: currentcolor;
+                    border-bottom-style: none;
+                    border-bottom-width: 0px;
+                    border-bottom: 2px solid #fcd12f;
+                    color: #fff;
+                    font: 20px/22px 'Open Sans',sans-serif;
+                    font-weight: normal;
+                    font-weight: 400;
+                    width: 70%;
+                    box-sizing: border-box;
+                    float: left;
+                }
+                button {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 0;
+                    padding: 0 25px;
+                    height: 76px;
+                    background: url(../images/bg-button-codigos-promocionales.png) no-repeat right top #fcc724;
+                    font: 14px/18px Montserrat,sans-serif;
+                    font-weight: normal;
+                    font-weight: 700;
+                    color: #574500;
+                    border: 0;
+                    width: 30%;
+                    box-sizing: border-box;
+                    float: left;
+                }
+            }
+        }
+    }
+    .full-width-blocks {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        clear: both;
+        .block {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            img {
+                width: 100%;
+            }
+            .title {
+                position: absolute;
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                top: 50px;
+                left: 0;
+                h3 {
+                    position: relative;
+                    display: block;
+                    margin: 0 0 15px;
+                    padding: 0;
+                    font: 30px/34px Montserrat,sans-serif;
+                    font-weight: normal;
+                    font-weight: 700;
+                    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+                }
+            }
+            .text {
+                position: absolute;
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 90px;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0,.5);
+                box-sizing: border-box;
+                overflow: hidden;
+                .left {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    width: 70%;
+                    .description {
+                        position: relative;
+                        display: block;
+                        padding: 10px 0 0 30px;
+                        margin: 0;
+                        box-sizing: border-box;
+                        float: left;
+                        width: 70%;
+                        font: 14px/18px 'Open Sans',sans-serif;
+                        font-weight: normal;
+                        font-weight: 400;
+                        color: #fff;
+                        h4 {
+                            position: relative;
+                            display: block;
+                            margin: 0 0 5px;
+                            padding: 0;
+                            font: 14px/22px 'Open Sans',sans-serif;
+                            color: #a5d04a;
+                        }
+                        p {
+                            position: relative;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            font: 14px/18px 'Open Sans',sans-serif;
+                            font-weight: normal;
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                    }
+                    .price {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        box-sizing: border-box;
+                        float: right;
+                        width: 30%;
+                        color: #fff;
+                        text-align: center;
+                        padding: 10px 0;
+                        font: 32px/38px Montserrat,sans-serif;
+                        font-weight: normal;
+                        font-weight: 400;
+                        .old {
+                            position: relative;
+                            display: block;
+                            padding: 0;
+                            margin: 0;
+                            color: #fff;
+                            font: 14px/18px Montserrat,sans-serif;
+                              font-weight: normal;
+                            font-weight: 400;
+                            text-align: center;
+                            text-decoration: line-through;
+                        }
+                        span {
+                            position: relative;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            text-transform: uppercase;
+                            font: 12px/16px 'Open Sans',sans-serif;
+                            font-weight: normal;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .right {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    float: right;
+                    width: 30%;
+                    a {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        padding: 35px 0;
+                        font: 20px/20px Montserrat,sans-serif;
+                        color: #fff;
+                        text-align: center;
+                        text-decoration: none;
+                        width: 100%;
+                    }
+                }
+            }
+            &.green {
+                .title {
+                    h3 {
+                        color: #a5d04a;
+                    }
+                }
+                .text {
+                    .left {
+                        .description {
+                            h4 {
+                                color: #a5d04a;
+                            }
+                        }
+                    }
+                    .right {
+                        a {
+                            background: #a5d04a;
+                        }
+                    }
+                }
+            }
+            &.yellow {
+                .title {
+                    h3 {
+                        color: #fcd12f;
+                    }
+                }
+                .text {
+                    .left {
+                        .description {
+                            h4 {
+                                color: #fcd12f;
+                            }
+                        }
+                    }
+                    .right {
+                        a {
+                            background: #fcd12f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        clear: both;
+        background: #fff;
+        ul {
+            position: relative;
+            display: block;
+            margin: 0;
+            float: left;
+            list-style: none;
+            padding: 0px 2px;
+            z-index: 0;
+            li {
+                position: relative;
+                display: block;
+                margin: 0;
+                padding: 0 12px;
+                padding-left: 12px;
+                float: left;
+                border-right: 1px solid #626262;
+                &:first-of-type {
+                    padding-left: 0;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    color: #626262;
+                    font: 12px/12px Montserrat,sans-serif;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+            &.links {
+                margin-top: 37px;
+            }
+            &.social {
+                float: right;
+                li {
+                    width: 90px;
+                    border: 0;
+                    padding: 0;
+                    padding-left: 0px;
+                    margin: 0 5px;
+                    float: left;
+                    a {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                        font: 0/0 a;
+                        text-shadow: none;
+                        text-decoration: none;
+                        width: 100%;
+                        height: 72px;
+                        border-bottom: 8px solid #626262;
+                        border-bottom-color: rgb(98, 98, 98);
+                        z-index: 1;
+                        &.facebook {
+                            background: url(../images/ico-facebook-footer.png) no-repeat center center;
+                            border-bottom-color: #385b95;
+                            &::after {
+                                background:url(../images/ico-facebook-blanco-footer.png) no-repeat center center #385b95;
+                                border-bottom-color:#385b95;
+                            }
+                        }
+                        &.twitter {
+                            background: url(../images/ico-twitter-footer.png) no-repeat center center;
+                            border-bottom-color: #2da9e8;
+                            &::after {
+                                background:url(../images/ico-twitter-blanco-footer.png) no-repeat center center #2da9e8;
+                                border-bottom-color:#2da9e8;
+                            }
+                        }
+                        &.instagram {
+                            background: url(../images/ico-instagram-footer.png) no-repeat center center;
+                            border-bottom-color: #4c82b0;
+                            &::after {
+                                background:url(../images/ico-instagram-blanco-footer.png) no-repeat center center #4c82b0;
+                                border-bottom-color:#4c82b0;
+                            }
+                        }
+                        &.pinterest {
+                            background: url(../images/ico-pinterest-footer.png) no-repeat center center;
+                            border-bottom-color: #cd242a;
+                            &::after {
+                                background:url(../images/ico-pinterest-blanco-footer.png) no-repeat center center #cd242a;
+                                border-bottom-color:#cd242a;
+                            }
+                        }
+                        &.youtube {
+                            background: url(../images/ico-youtube-footer.png) no-repeat center center;
+                            border-bottom-color: #df4a3e;
+                            &::after {
+                                background:url(../images/ico-youtube-blanco-footer.png) no-repeat center center #df4a3e;
+                                border-bottom-color:#df4a3e;
+                            }
+                        }
+                        &::after {
+                            content:"";
+                            display:block;
+                            width:100%;
+                            height:0;
+                            bottom:.5em;
+                            position:absolute;
+                            left:0;
+                            z-index:0;
+                            transition:all .2s ease-out;
+                        }
+                        &:hover {
+                            &::after {
+                                bottom:0;
+                                height:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

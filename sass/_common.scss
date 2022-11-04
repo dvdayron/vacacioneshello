@@ -9,15 +9,15 @@ body {
     .inner {
         position: relative;
         display: block;
-        margin: 0 auto;
+        margin: 0 15px;
         padding: 0;
         max-width: 1140px;
-        width: 100%;
+        width: auto;
     }
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: auto;
+    width: 100%;
 }
 
 .clearfix {

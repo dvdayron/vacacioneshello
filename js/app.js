@@ -86,6 +86,16 @@ $(document).ready(function(){
         });
     }
 
+    // menu-button
+    if ($('.menu-button').length) {
+        $('.menu-button').click(function () {
+            $('.sidenav').addClass('on');
+        })
+        $('.close-nav').click(function () {
+            $('.sidenav').removeClass('on');
+        })
+    }
+
     // modal form
     var sending = false;
     var fields = ['name', 'last-name', 'email', 'phone'];

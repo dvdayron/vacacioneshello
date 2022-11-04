@@ -5,12 +5,26 @@ header {
     display: block;
     margin: 0;
     padding: 0;
-    background: transparent;
+    background: #13b4cf;
+    @include box-shadow(2px 3px 9px 4px #00000099);
     width: 100%;
     height: 62px;
     z-index: 101;
+    .inner {
+        height: 100%;
+    }
     .menu-button {
-        display: none;
+        position: absolute;
+        display: block;
+        left: 15px;
+        top: 50%;
+        @include transform(translate(0,-50%));
+        background: url(../images/ico-menu.png) no-repeat 0 0;
+        background-size: auto;
+        width: 34px;
+        height: 28px;
+        background-size: 100%;
+        z-index: 2;
     }
     .logo {
         position: absolute;
@@ -20,6 +34,12 @@ header {
         z-index: 2;
         &.mini {
             display: none;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 70px;
+            height: auto;
+            top: 10px;
         }
     }
     nav {
@@ -139,6 +159,96 @@ header {
     }
 }
 
+.sidenav {
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 350;
+    background-color: rgba(0, 0, 0, 0.4);
+    .wrapper {
+        height: 100%;
+        position: fixed;
+        width: 280px;
+        background-color: #FFFFFF;
+        border-right: #000000 3px solid;
+        @include box-shadow(2px 1px 12px);
+        transition: 0.5s;
+        top: 0;
+        left: -100%;
+        .head {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                font-size: 36px;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        ul.main-menu {
+            padding: 0;
+            li {
+                padding: 10px;
+                background: #F7F7F7;
+                list-style: none;
+                border-left: 4px solid #FCC723;
+                margin: 1px 0;
+                a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: #000000;
+                    display: block;
+                    transition: 0.3s;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        ul.secondary-menu {
+            padding: 0;
+            li {
+                width: 50%;
+                float: left;
+                padding: 10px;
+                background: #FFFFFF;
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    display: block;
+                    transition: 0.3s;
+                    text-transform: uppercase;
+                    padding: 8px 10px;
+                    font-weight: 400;
+                    border-bottom: 2px solid #F7F7F7;
+                    color: black;
+                    &::before {
+                        content: '';
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 13px 0 0;
+                        padding: 0;
+                        top: 3px;
+                        background: url(../images/ico-login.png) no-repeat 0 0;
+                        width: 11px;
+                        height: 14px;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    &.on {
+        left: 0;
+        .wrapper {
+            left: 0;
+        }
+    }
+}
+
 .master-slider {
     height: 500px !important;
     top: -62px !important;
@@ -156,7 +266,7 @@ header {
 .reservation-form-container {
     position: relative;
     display: block;
-    margin: -255px 0 0 0;
+    margin: 25px 0 0;
     padding: 0;
     .reservation-form {
         padding: 0px 25px 25px 25px;
@@ -179,7 +289,7 @@ header {
                 margin: 0;
                 padding: 0;
                 float: left;
-                width: 60%;
+                width: 100%;
                 ul {
                     padding: 15px;
                     position: relative;
@@ -226,14 +336,14 @@ header {
                 margin: 0;
                 padding: 0;
                 float: left;
-                width: 40%;
+                width: 100%;
                 ul {
                     position: relative;
                     display: block;
                     margin: 0;
                     padding: 0;
                     list-style: none;
-                    text-align: right;
+                    text-align: center;
                     li {
                         position: relative;
                         display: inline-block;
@@ -269,14 +379,16 @@ header {
             width: 100%;
             .table-row {
                 position: relative;
-                display: table-row;
+                display: block;
                 margin: 0;
                 padding: 0;
                 .table-cell {
                     position: relative;
-                    display: table-cell;
-                    margin: 0;
+                    display: block;
+                    margin: 0 0 10px;
                     padding: 0;
+                    border-right: 1px solid #e7e7e7;
+                    width: 100%;
                 }
             }
             .labels {
@@ -302,7 +414,7 @@ header {
                 }
             }
             .inputs {
-                display: table-row-group;
+                display: block;
                 position: relative;
                 margin: 0;
                 padding: 0;
@@ -313,7 +425,6 @@ header {
                 .table-row {
                     .table-cell {
                         border-left: 1px solid #e7e7e7;
-                        border-right: 0;
                         background: #fbfbfb;
                         padding: 0;
                         vertical-align: middle;
@@ -339,15 +450,14 @@ header {
                             border-left: 0;
                             text-align: right;
                             background: linear-gradient(to right,#fbfbfb 0,#fff 100%);
-                            width: 15%;
+                            width: 100%;
                             padding-right: 0;
+                            border-right: none;
                             &::after {
-                                width: 50%;
-                                border-bottom: 1px solid #e7e7e7;
+                                border-color: transparent;
                             }
                             &::before {
-                                width: 50%;
-                                border-bottom: 1px solid #e7e7e7;
+                                border-color: transparent;
                             }
                         }
                         input, .bootstrap-select .btn {
@@ -356,7 +466,7 @@ header {
                             margin: 0;
                             padding: 0 30px 0 20px;
                             width: 100%;
-                            height: 60px;
+                            height: 40px;
                             background: transparent;
                             background-color: transparent;
                             font: 14px/18px 'Open Sans',sans-serif;
@@ -366,13 +476,14 @@ header {
                             border: 0;
                             outline: 0;
                             &.calendar {
-                                background: url(../images/ico-calendario-input.svg) no-repeat 90% center;
+                                background: url(../images/ico-calendario-input.svg) no-repeat 98% center;
                             }
                             &.guests {
-                                background: url(../images/ico-huespedes-input.svg) no-repeat 100% center;
+                                background: url(../images/ico-huespedes-input.svg) no-repeat 98% center;
                             }
                         }
                         button[type="submit"] {
+                            width: 100%;
                             position: relative;
                             display: inline-block;
                             margin: 0;
@@ -406,6 +517,9 @@ header {
         .full {
             display: none !important;
         }
+        .full-label {
+            display: none !important;
+        }
         &.hotel {
             .head {
                 .left {
@@ -427,7 +541,10 @@ header {
                 }
             }
             .full {
-                display: table-cell !important;
+                display: block !important;
+            }
+            .full-label {
+                display: block !important;
             }
         }
         .rooms-list {
@@ -555,7 +672,7 @@ header {
     .banner {
         position: relative;
         display: block;
-        margin: 0;
+        margin: 0 0 15px;
         padding: 0;
         a {
             position: relative;
@@ -572,7 +689,7 @@ header {
             padding: 0;
             left: 30px;
             bottom: 35px;
-            font: 28px/28px Montserrat,sans-serif;
+            font: 14px/18px Montserrat,sans-serif;
             font-weight: normal;
             font-weight: 700;
             color: #fff;
@@ -598,7 +715,7 @@ header {
     position: relative;
     display: block;
     margin: 0;
-    padding: 77px 77px 60px;
+    padding: 25px 50px;
     .title {
         position: relative;
         display: block;
@@ -609,28 +726,25 @@ header {
         h1 {
             position: relative;
             display: block;
-            margin: -37px 0 15px;
+            margin: 0;
             padding: 0;
-            font: 47px/50px Montserrat,sans-serif;
+            font: 24px/30px Montserrat,sans-serif;
             text-shadow: 1px 1px 0px grey;
             color: black;
-            div {
-                margin: 0 0 -28px;
-            }
         }
     }
     .text {
         position: relative;
         display: block;
         margin: 0;
-        padding: 0 150px;
+        padding: 0 15px;
         width: 100%;
         text-align: center;
         div:not(.clearfix) {
             display: none;
         }
         p {
-            font: 16px/22px Montserrat,sans-serif;
+            font: 14px/18px Montserrat,sans-serif;
             text-shadow: none;
             color: black;
             position: relative;
@@ -653,7 +767,7 @@ header {
     position: relative;
     display: block;
     margin: 0;
-    padding: 30px;
+    padding: 30px 15px;
     background: #14b5d0;
     .text {
         position: relative;
@@ -681,7 +795,7 @@ header {
                 strong {
                     margin: 0;
                     display: block;
-                    font: 30px/40px Montserrat,sans-serif;
+                    font: 24px/28px Montserrat,sans-serif;
                     font-weight: normal;
                     font-weight: 700;
                     text-transform: none;
@@ -697,7 +811,7 @@ header {
     .form-container {
         position: relative;
         display: table;
-        margin: 0;
+        margin: 25px 0 0;
         padding: 0;
         vertical-align: middle;
         width: 100%;
@@ -728,7 +842,7 @@ header {
                 border-bottom-width: 0px;
                 border-bottom: 2px solid #fcd12f;
                 color: #fff;
-                font: 20px/22px 'Open Sans',sans-serif;
+                font: 16px/22px 'Open Sans',sans-serif;
                 font-weight: normal;
                 font-weight: 400;
                 width: 70%;
@@ -739,10 +853,10 @@ header {
                 position: relative;
                 display: block;
                 margin-bottom: 0;
-                padding: 0 25px;
+                padding: 0 10px;
                 height: 76px;
                 background: url(../images/bg-button-codigos-promocionales.png) no-repeat right top #fcc724;
-                font: 14px/18px Montserrat,sans-serif;
+                font: 12px/18px Montserrat,sans-serif;
                 font-weight: normal;
                 font-weight: 700;
                 color: #574500;
@@ -772,34 +886,27 @@ header {
             width: 100%;
         }
         .title {
-            position: absolute;
             display: block;
-            margin: 0;
+            margin: 15px 0 0;
             padding: 0;
             width: 100%;
             text-align: center;
-            top: 50px;
-            left: 0;
             h3 {
                 position: relative;
                 display: block;
                 margin: 0 0 15px;
                 padding: 0;
-                font: 30px/34px Montserrat,sans-serif;
+                font: 22px/26px Montserrat,sans-serif;
                 font-weight: normal;
                 font-weight: 700;
                 text-shadow: 1px 1px 1px rgba(0,0,0,.5);
             }
         }
         .text {
-            position: absolute;
             display: block;
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 90px;
-            bottom: 0;
-            left: 0;
             background: rgba(0,0,0,.5);
             box-sizing: border-box;
             overflow: hidden;
@@ -809,7 +916,7 @@ header {
                 margin: 0;
                 padding: 0;
                 float: left;
-                width: 70%;
+                width: 75%;
                 .description {
                     position: relative;
                     display: block;
@@ -827,7 +934,7 @@ header {
                         display: block;
                         margin: 0 0 5px;
                         padding: 0;
-                        font: 14px/22px 'Open Sans',sans-serif;
+                        font: 12px/16px 'Open Sans',sans-serif;
                         color: #a5d04a;
                     }
                     p {
@@ -835,7 +942,7 @@ header {
                         display: block;
                         margin: 0;
                         padding: 0;
-                        font: 14px/18px 'Open Sans',sans-serif;
+                        font: 12px/14px 'Open Sans',sans-serif;
                         font-weight: normal;
                         font-weight: 400;
                         color: #fff;
@@ -851,7 +958,7 @@ header {
                     color: #fff;
                     text-align: center;
                     padding: 10px 0;
-                    font: 32px/38px Montserrat,sans-serif;
+                    font: 22px/26px Montserrat,sans-serif;
                     font-weight: normal;
                     font-weight: 400;
                     .old {
@@ -884,13 +991,13 @@ header {
                 margin: 0;
                 padding: 0;
                 float: right;
-                width: 30%;
+                width: 25%;
                 a {
                     position: relative;
                     display: block;
                     margin: 0;
                     padding: 35px 0;
-                    font: 20px/20px Montserrat,sans-serif;
+                    font: 14px/16px Montserrat,sans-serif;
                     color: #fff;
                     text-align: center;
                     text-decoration: none;
@@ -1014,28 +1121,22 @@ footer {
         position: relative;
         display: block;
         margin: 0;
-        float: left;
         list-style: none;
         padding: 0px 2px;
         z-index: 0;
+        text-align: center;
         li {
             position: relative;
             display: block;
             margin: 0;
             padding: 0 12px;
-            padding-left: 12px;
-            float: left;
-            border-right: 1px solid #626262;
-            &:first-of-type {
-                padding-left: 0;
-            }
             a {
                 position: relative;
                 display: block;
                 margin: 0;
                 padding: 0;
                 color: #626262;
-                font: 12px/12px Montserrat,sans-serif;
+                font: 18px/24px Montserrat,sans-serif;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -1044,13 +1145,13 @@ footer {
             margin-top: 37px;
         }
         &.social {
-            float: right;
             li {
-                width: 90px;
+                width: 50px;
                 border: 0;
                 padding: 0;
                 padding-left: 0px;
                 margin: 0 5px;
+                display: inline-block;
                 a {
                     position: relative;
                     display: block;

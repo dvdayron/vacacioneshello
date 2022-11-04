@@ -21,4 +21,7 @@ El fichero js/app.js contiene el codigo js que he usado para resolver las funcio
 <li>
 El fichero app/contact-form.php contiene el codigo php que procesa los datos y envia los emails en formato html.
 </li>
+<li>
+He realizado las modificaciones para el responsive, muy similar al original aunque no identico.
+</li>
 </ol>

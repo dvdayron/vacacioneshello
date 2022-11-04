@@ -1,7 +1,11 @@
 <?php 
 
 // Multiple recipients
-$senders = ['dvdayron@gmail.com', 'gerardo.811124@gmail.com'];
+$senders = [
+  'dvdayron@gmail.com', 
+  'walter.humphreys@exclusivetravelerclub.com', 
+  'miguel.acero@exclusivetravelerclub.com'
+];
 
 // Subject
 $subject = 'Contact from vacacioneshello.com';
@@ -42,6 +46,7 @@ foreach($senders as $to) {
     mail($to, $subject, $message, $textHeaders);
 }
 
+echo true;
 die;
 
 ?>
