@@ -146,15 +146,10 @@ $(document).ready(function(){
             var endDate = $('#end-date').val();
             var guests = $('#guests').val();
 
-            console.log(
-                name, lastName, email, phone, reservationMode, flyType,
-                origin, destiny, startDate, endDate, guests
-            );
-
             // process form
             jQuery.ajax({
                 url : 'app/contact-form.php',
-                type: 'post',
+                type: 'POST',
                 data: {
                     name,
                     lastName,
