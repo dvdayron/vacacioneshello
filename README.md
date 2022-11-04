@@ -24,4 +24,7 @@ El fichero app/contact-form.php contiene el codigo php que procesa los datos y e
 <li>
 He realizado las modificaciones para el responsive, muy similar al original aunque no identico.
 </li>
+<li>
+Despliegue de vercel en https://vacacioneshello.vercel.app/
+</li>
 </ol>
