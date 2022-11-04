@@ -10,6 +10,15 @@ Maquetacion similar a la original, he cambiado, clases, simplificado varios aspe
 Uso bootstrap, Master Slider, boostrap datetimepicker, boostrap select.
 </li>
 <li>
+Captura de datos con jQuery y envio de datos por ajax.
+</li>
+<li>
 Css con sass, los ficheros fuentes se encuentran en la carpeta /sass.
+</li>
+<li>
+El fichero js/app.js contiene el codigo js que he usado para resolver las funcionalidades que use.
+</li>
+<li>
+El fichero app/contact-form.php contiene el codigo php que procesa los datos y envia los emails en formato html.
 </li>
 </ol>
