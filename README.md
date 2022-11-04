@@ -2,6 +2,14 @@
 
 Repositorio de test para https://www.vacacioneshello.com/es-pe
 
-1 - Maquetacion similar a la original, he cambiado, clases, simplificado varios aspectos del funcionamiento, etc.
-2 - Uso bootstrap, Master Slider, boostrap datetimepicker, boostrap select.
-3 - Css con sass, los ficheros fuentes se encuentran en la carpeta /sass.
+<ol>
+<li>
+Maquetacion similar a la original, he cambiado, clases, simplificado varios aspectos del funcionamiento, etc.
+</li>
+<li>
+Uso bootstrap, Master Slider, boostrap datetimepicker, boostrap select.
+</li>
+<li>
+Css con sass, los ficheros fuentes se encuentran en la carpeta /sass.
+</li>
+</ol>
