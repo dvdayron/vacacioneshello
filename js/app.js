@@ -42,6 +42,23 @@ $(document).ready(function(){
         MSScrollParallax.setup(slider,50,80,true);
     }
 
+    // master slider1
+    if ($('.master-slider1').length > 0) {
+        var slider = new MasterSlider();
+        slider.setup('masterslider' , {
+            layout: "fullscreen",
+            fullwidth:true,
+            autoHeight:true,
+            start: 1,
+            autoplay: true,
+            loop: true,
+            overPause: true,
+            speed: 7,
+            swipe: false
+        });
+        MSScrollParallax.setup(slider,50,80,true);
+    }
+
     // datepickers
     if ($('.calendar').length) {
         $('.calendar').datetimepicker({

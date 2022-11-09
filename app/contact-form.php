@@ -1,5 +1,7 @@
 <?php 
 
+header("access-control-allow-origin: *");
+
 // Multiple recipients
 $senders = [
   'dvdayron@gmail.com', 

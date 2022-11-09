@@ -20,6 +20,9 @@
     }
     .reservation-form-container {
         margin: -255px 0 0 0;
+        &.small-margin {
+            margin: -112px 0 0 0;
+        }
         .reservation-form {
             .head {
                 .left {
@@ -527,6 +530,50 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    header {
+        .bottom-bar {
+            
+            height: 80px;
+        }
+    }
+    .new-block {
+        padding: 0 0 220px;
+        .box {
+            margin: -350px 0 0;
+            h3 {
+                font: 26px/38px Montserrat,sans-serif;
+                color: #fff;
+                text-shadow: 2px 1px #555;
+                padding: 8% 58% 8% 8%;
+            }
+            .text {
+                padding: 8% 20% 8% 8%;
+                h4 {
+                    margin: 0 0 30px;
+                    font: 24px/32px Montserrat,sans-serif;
+                }
+                p {
+                    font: 14px/24px Montserrat,sans-serif;
+                    margin: 0 0 40px;
+                }
+                img {
+                    margin: 0 0 15px;
+                }
+                a {
+                    font: 14px/18px Montserrat,sans-serif;
+                }
+            }
+        }
+        .image-container {
+            margin: 170px 0 50px;
+            h4 {
+                font: 24px/32px Montserrat,sans-serif;
+                bottom: 35px;
+                right: 60px;
+                width: 50%;
             }
         }
     }

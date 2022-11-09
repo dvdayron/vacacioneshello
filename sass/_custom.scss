@@ -10,6 +10,9 @@ header {
     width: 100%;
     height: 62px;
     z-index: 101;
+    &.version-1 {
+        background: #fff;
+    }
     .inner {
         height: 100%;
     }
@@ -25,6 +28,17 @@ header {
         height: 28px;
         background-size: 100%;
         z-index: 2;
+        &.b {
+            position: relative;
+            background: none;
+            @include transform(none);
+            top: auto;
+            left: auto;
+            margin: 0 25px 0 0;
+            img {
+                max-width: 30px;
+            }
+        }
     }
     .logo {
         position: absolute;
@@ -1224,6 +1238,278 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+header {
+    .top-bar {
+        position: relative;
+        background: #103760;
+        height: 32px;
+        overflow: hidden;
+        .left {
+            float: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                margin: 0 25px 0 0;
+                li {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0 9px;
+                    a {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        color: #fff;
+                        text-decoration: none;
+                        font: 9px/32px 'Maven Pro',sans-serif;
+                        font-weight: normal;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        &:hover {
+                            opacity: .8;
+                        }
+                        &.facebook {
+                            background: url(../images/ico-facebook-header.png) no-repeat center center;
+                            width: 9px;
+                            height: 17px;
+                        }
+                        &.twitter {
+                            background: url(../images/ico-twitter-header.png) no-repeat center center;
+                            width: 19px;
+                            height: 16px;
+                        }
+                        &.instagram {
+                            background: url(../images/ico-instagram-header.png) no-repeat center center;
+                            width: 18px;
+                            height: 17px;
+                        }
+                        &.pinterest {
+                            background: url(../images/ico-pinterest-header.png) no-repeat center center;
+                            width: 14px;
+                            height: 16px;
+                        }
+                        &.youtube {
+                            background: url(../images/ico-youtube-header.png) no-repeat center center;
+                            width: 20px;
+                            height: 13px;
+                        }
+                    }
+                    &.active {
+                        background-color: #fff;
+                        a {
+                            color: #103760;
+                        }
+                    }
+                }
+                &.social {
+                    li {
+                        padding: 0;
+                        a {
+                            margin: 0 8px;
+                        }
+                        &:first-of-type {
+                            padding: 0 25px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            float: right;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+                align-items: center;
+                li {
+                    a {
+                        position: relative;
+                        margin: 0 0 0 20px;
+                        padding: 0 9px 0 25px;
+                        color: #fff;
+                        text-decoration: none;
+                        font: 9px/32px 'Maven Pro',sans-serif;
+                        font-weight: normal;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            left: 0;
+                            top: 0;
+                        }
+                        &.icon-world::before {
+                            background: url(../images/ico-mundo-etc.png) no-repeat 0 0;
+                            width: 13px;
+                            height: 13px;
+                            top: -2px;
+                        }
+                        &.icon-mail::before {
+                            background: url(../images/ico-contacto.png) no-repeat 0 0;
+                            width: 16px;
+                            height: 10px;
+                        }
+                        &.icon-user::before {
+                            background: url(../images/ico-perfil.png) no-repeat 0 0;
+                            width: 10px;
+                            height: 11px;
+                            top: -1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-bar {
+        background: #fff;
+        height: 60px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: row;
+                li {
+                    font: 12px/12px 'Maven Pro',sans-serif;
+                    font-weight: normal;
+                    font-weight: 400;
+                    color: #000;
+                    a {
+                        position: relative;
+                        margin: 0 13px;
+                        padding: 0;
+                        font: 12px/12px 'Maven Pro',sans-serif;
+                        font-weight: normal;
+                        font-weight: 400;
+                        color: #000;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        &:hover {
+                            color: #103760;
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: #103760;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.master-slider {
+    &.big {
+        height: 590px !important;
+        top: 0 !important;
+        margin-bottom: 0 !important;
+        .ms-slide {
+            .ms-slide-bgcont {
+                img {
+                    height: auto !important;
+                }
+            }
+        }
+        .overly {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+            background-color: rgba(0,0,0,.2);
+        }
+    }
+}
+
+.new-block {
+    background: #f3f3f3;
+    padding: 0 0 25px;
+    .inner {
+        max-width: 1070px;
+    }
+    .box {
+        border: 2px solid #fff;
+        margin: 25px 0 0;
+        h3 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font: 24px/28px Montserrat,sans-serif;
+            font-weight: bold;
+            color: #103760;
+            padding: 8%;
+        }
+        .text {
+            background-color: #fff;
+            padding: 8%;
+            h4 {
+                position: relative;
+                margin: 0 0 20px;
+                padding: 0;
+                font: 18px/22px Montserrat,sans-serif;
+                font-weight: bold;
+                color: #000;
+            }
+            p {
+                font: 14px/24px Montserrat,sans-serif;
+                color: black;
+                margin: 0 0 30px;
+            }
+            img {
+                margin: 0 0 15px;
+            }
+            a {
+                display: block;
+                font: 14px/18px Montserrat,sans-serif;
+                color: #a38a47;
+                font-weight: bold;
+            }
+        }
+    }
+    .image-container {
+        position: relative;
+        margin: 25px 0;
+        h4 {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            font: 18px/24px Montserrat,sans-serif;
+            font-weight: bold;
+            color: #fff;
+            bottom: 15px;
+            right: 25px;
+            width: 70%;
         }
     }
 }

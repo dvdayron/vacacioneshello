@@ -23,6 +23,9 @@ body {
 .clearfix {
   clear: both; }
 
+.no-margin {
+  margin: 0 !important; }
+
 .no-padding {
   padding: 0 !important; }
 
@@ -88,6 +91,8 @@ header {
   width: 100%;
   height: 62px;
   z-index: 101; }
+  header.version-1 {
+    background: #fff; }
   header .inner {
     height: 100%; }
   header .menu-button {
@@ -106,6 +111,19 @@ header {
     height: 28px;
     background-size: 100%;
     z-index: 2; }
+    header .menu-button.b {
+      position: relative;
+      background: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none;
+      top: auto;
+      left: auto;
+      margin: 0 25px 0 0; }
+      header .menu-button.b img {
+        max-width: 30px; }
   header .logo {
     position: absolute;
     display: block;
@@ -1104,6 +1122,220 @@ footer {
           bottom: 0;
           height: 100%; }
 
+header .top-bar {
+  position: relative;
+  background: #103760;
+  height: 32px;
+  overflow: hidden; }
+  header .top-bar .left {
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center; }
+    header .top-bar .left ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      margin: 0 25px 0 0; }
+      header .top-bar .left ul li {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0 9px; }
+        header .top-bar .left ul li a {
+          position: relative;
+          display: block;
+          margin: 0;
+          color: #fff;
+          text-decoration: none;
+          font: 9px/32px 'Maven Pro',sans-serif;
+          font-weight: normal;
+          font-weight: 400;
+          text-transform: uppercase; }
+          header .top-bar .left ul li a:hover {
+            opacity: .8; }
+          header .top-bar .left ul li a.facebook {
+            background: url(../images/ico-facebook-header.png) no-repeat center center;
+            width: 9px;
+            height: 17px; }
+          header .top-bar .left ul li a.twitter {
+            background: url(../images/ico-twitter-header.png) no-repeat center center;
+            width: 19px;
+            height: 16px; }
+          header .top-bar .left ul li a.instagram {
+            background: url(../images/ico-instagram-header.png) no-repeat center center;
+            width: 18px;
+            height: 17px; }
+          header .top-bar .left ul li a.pinterest {
+            background: url(../images/ico-pinterest-header.png) no-repeat center center;
+            width: 14px;
+            height: 16px; }
+          header .top-bar .left ul li a.youtube {
+            background: url(../images/ico-youtube-header.png) no-repeat center center;
+            width: 20px;
+            height: 13px; }
+        header .top-bar .left ul li.active {
+          background-color: #fff; }
+          header .top-bar .left ul li.active a {
+            color: #103760; }
+      header .top-bar .left ul.social li {
+        padding: 0; }
+        header .top-bar .left ul.social li a {
+          margin: 0 8px; }
+        header .top-bar .left ul.social li:first-of-type {
+          padding: 0 25px 0 0; }
+  header .top-bar .right {
+    float: right; }
+    header .top-bar .right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      align-items: center; }
+      header .top-bar .right ul li a {
+        position: relative;
+        margin: 0 0 0 20px;
+        padding: 0 9px 0 25px;
+        color: #fff;
+        text-decoration: none;
+        font: 9px/32px 'Maven Pro',sans-serif;
+        font-weight: normal;
+        font-weight: 400;
+        text-transform: uppercase; }
+        header .top-bar .right ul li a::before {
+          content: '';
+          position: absolute;
+          display: block;
+          margin: 0;
+          padding: 0;
+          left: 0;
+          top: 0; }
+        header .top-bar .right ul li a.icon-world::before {
+          background: url(../images/ico-mundo-etc.png) no-repeat 0 0;
+          width: 13px;
+          height: 13px;
+          top: -2px; }
+        header .top-bar .right ul li a.icon-mail::before {
+          background: url(../images/ico-contacto.png) no-repeat 0 0;
+          width: 16px;
+          height: 10px; }
+        header .top-bar .right ul li a.icon-user::before {
+          background: url(../images/ico-perfil.png) no-repeat 0 0;
+          width: 10px;
+          height: 11px;
+          top: -1px; }
+
+header .bottom-bar {
+  background: #fff;
+  height: 60px; }
+  header .bottom-bar .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row; }
+  header .bottom-bar .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; }
+    header .bottom-bar .inner ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row; }
+      header .bottom-bar .inner ul li {
+        font: 12px/12px 'Maven Pro',sans-serif;
+        font-weight: normal;
+        font-weight: 400;
+        color: #000; }
+        header .bottom-bar .inner ul li a {
+          position: relative;
+          margin: 0 13px;
+          padding: 0;
+          font: 12px/12px 'Maven Pro',sans-serif;
+          font-weight: normal;
+          font-weight: 400;
+          color: #000;
+          text-decoration: none;
+          text-transform: uppercase; }
+          header .bottom-bar .inner ul li a:hover {
+            color: #103760; }
+        header .bottom-bar .inner ul li.active a {
+          color: #103760; }
+
+.master-slider.big {
+  height: 590px !important;
+  top: 0 !important;
+  margin-bottom: 0 !important; }
+  .master-slider.big .ms-slide .ms-slide-bgcont img {
+    height: auto !important; }
+  .master-slider.big .overly {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.2); }
+
+.new-block {
+  background: #f3f3f3;
+  padding: 0 0 25px; }
+  .new-block .inner {
+    max-width: 1070px; }
+  .new-block .box {
+    border: 2px solid #fff;
+    margin: 25px 0 0; }
+    .new-block .box h3 {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      font: 24px/28px Montserrat,sans-serif;
+      font-weight: bold;
+      color: #103760;
+      padding: 8%; }
+    .new-block .box .text {
+      background-color: #fff;
+      padding: 8%; }
+      .new-block .box .text h4 {
+        position: relative;
+        margin: 0 0 20px;
+        padding: 0;
+        font: 18px/22px Montserrat,sans-serif;
+        font-weight: bold;
+        color: #000; }
+      .new-block .box .text p {
+        font: 14px/24px Montserrat,sans-serif;
+        color: black;
+        margin: 0 0 30px; }
+      .new-block .box .text img {
+        margin: 0 0 15px; }
+      .new-block .box .text a {
+        display: block;
+        font: 14px/18px Montserrat,sans-serif;
+        color: #a38a47;
+        font-weight: bold; }
+  .new-block .image-container {
+    position: relative;
+    margin: 25px 0; }
+    .new-block .image-container h4 {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font: 18px/24px Montserrat,sans-serif;
+      font-weight: bold;
+      color: #fff;
+      bottom: 15px;
+      right: 25px;
+      width: 70%; }
+
 @media (min-width: 992px) {
   body .inner {
     margin: 0 auto;
@@ -1121,6 +1353,8 @@ footer {
       display: none; }
   .reservation-form-container {
     margin: -255px 0 0 0; }
+    .reservation-form-container.small-margin {
+      margin: -112px 0 0 0; }
     .reservation-form-container .reservation-form .head .left {
       width: 60%; }
     .reservation-form-container .reservation-form .head .right {
@@ -1513,4 +1747,34 @@ footer {
               transition: all .2s ease-out; }
             footer ul.social li a:hover::after {
               bottom: 0;
-              height: 100%; } }
+              height: 100%; }
+  header .bottom-bar {
+    height: 80px; }
+  .new-block {
+    padding: 0 0 220px; }
+    .new-block .box {
+      margin: -350px 0 0; }
+      .new-block .box h3 {
+        font: 26px/38px Montserrat,sans-serif;
+        color: #fff;
+        text-shadow: 2px 1px #555;
+        padding: 8% 58% 8% 8%; }
+      .new-block .box .text {
+        padding: 8% 20% 8% 8%; }
+        .new-block .box .text h4 {
+          margin: 0 0 30px;
+          font: 24px/32px Montserrat,sans-serif; }
+        .new-block .box .text p {
+          font: 14px/24px Montserrat,sans-serif;
+          margin: 0 0 40px; }
+        .new-block .box .text img {
+          margin: 0 0 15px; }
+        .new-block .box .text a {
+          font: 14px/18px Montserrat,sans-serif; }
+    .new-block .image-container {
+      margin: 170px 0 50px; }
+      .new-block .image-container h4 {
+        font: 24px/32px Montserrat,sans-serif;
+        bottom: 35px;
+        right: 60px;
+        width: 50%; } }
