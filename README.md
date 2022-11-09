@@ -27,4 +27,7 @@ He realizado las modificaciones para el responsive, muy similar al original aunq
 <li>
 Despliegue de vercel en https://vacacioneshello.vercel.app/
 </li>
+<li>
+Despliegue de vercel version 1 en https://vacacioneshello.vercel.app/index1.html
+</li>
 </ol>
